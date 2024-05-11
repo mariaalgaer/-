@@ -1,0 +1,18 @@
+a = open('274.txt').readlines()[1:]
+f = [int(x) for x in a]
+d7 = set()
+n = set()
+for i in f:
+    if i%7==0:d7.add(i)
+    else:n.add(i)
+for i in d7:
+    if i%160!=max(d7)%160:
+        d72 = i
+        print(i)
+for i in n:
+    if i%160!=max(n)%160:
+        n2 = i
+print(max(d7), max(n),   max(d7)*max(n),    max(d7)%160!=max(n)%160)
+print(n2, max(d7),          n2*max(d7),            n2%160!=max(d7)%160)
+print(d72, max(n),         d72*max(n),            d72%160!=max(n)%160)
+print(d72, max(d7),       d72*max(d7),         d72%160!=max(d7)%160)
